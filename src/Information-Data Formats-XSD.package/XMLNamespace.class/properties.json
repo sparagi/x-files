@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "BEL 6/8/2005 21:57",
+	"super" : "Object",
+	"category" : "Information-Data Formats-XSD",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Instances"
+	],
+	"instvars" : [
+		"uri",
+		"elementType",
+		"contents"
+	],
+	"name" : "XMLNamespace",
+	"type" : "normal"
+}

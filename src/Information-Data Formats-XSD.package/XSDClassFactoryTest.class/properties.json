@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "BEL 5/29/2005 14:18",
+	"super" : "TestCase",
+	"category" : "Information-Data Formats-XSD-Test",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XSDClassFactoryTest",
+	"type" : "normal"
+}

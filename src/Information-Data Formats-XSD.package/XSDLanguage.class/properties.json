@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "BEL 5/30/2005 01:59",
+	"super" : "XSDToken",
+	"category" : "Information-Data Formats-XSD-Simple Types",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XSDLanguage",
+	"type" : "normal"
+}

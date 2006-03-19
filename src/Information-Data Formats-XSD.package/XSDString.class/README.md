@@ -1,0 +1,1 @@
+I represent simpleType "string", a primitive datatype.  See http://www.w3.org/TR/xmlschema-2/#string.

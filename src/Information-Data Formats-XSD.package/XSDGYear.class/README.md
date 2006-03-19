@@ -1,0 +1,1 @@
+The 'g' prefix signals time periods in the Gregorian calendar.

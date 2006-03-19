@@ -1,0 +1,1 @@
+The XML and XSD documents used in these tests come from W3C's Recommendation "XML Schema Part 0: Primer Second Edition", dated October 28, 2004.

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "XSDComplexType",
+	"category" : "Information-Data Formats-XSD",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XSDDocument",
+	"type" : "normal"
+}

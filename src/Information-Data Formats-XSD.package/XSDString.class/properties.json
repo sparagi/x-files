@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "BEL 5/31/2005 16:52",
+	"super" : "XSDAtomicType",
+	"category" : "Information-Data Formats-XSD-Simple Types",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"length",
+		"minLength",
+		"maxLength"
+	],
+	"name" : "XSDString",
+	"type" : "normal"
+}

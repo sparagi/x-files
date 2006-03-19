@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Error",
+	"category" : "Information-Data Formats-XSD",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SchemaError",
+	"type" : "normal"
+}

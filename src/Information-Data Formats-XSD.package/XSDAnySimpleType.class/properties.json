@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "BEL 6/8/2005 16:30",
+	"super" : "XSDType",
+	"category" : "Information-Data Formats-XSD",
+	"classinstvars" : [
+		"constrainingFacets",
+		"targetNamespace"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"namespaces"
+	],
+	"name" : "XSDAnySimpleType",
+	"type" : "normal"
+}

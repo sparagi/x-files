@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "XSDType",
+	"category" : "Information-Data Formats-XSD",
+	"classinstvars" : [
+		"requiredAttributes",
+		"attributeSelectors",
+		"knownElements",
+		"xmlns"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"elementStream"
+	],
+	"name" : "XSDComplexType",
+	"type" : "normal"
+}

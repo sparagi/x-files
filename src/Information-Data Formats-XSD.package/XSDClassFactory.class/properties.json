@@ -1,0 +1,27 @@
+{
+	"commentStamp" : "BEL 5/31/2005 18:56",
+	"super" : "Object",
+	"category" : "Information-Data Formats-XSD",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"StandardSimpleTypes"
+	],
+	"instvars" : [
+		"schema",
+		"classPrefix",
+		"xsdPrefix",
+		"changeSetName",
+		"globalElements",
+		"globalAttributes",
+		"anonymousClassCounter",
+		"classStack",
+		"forwardReferences",
+		"knownTypes",
+		"unresolvedElements",
+		"unresolvedAttributes",
+		"namespaces"
+	],
+	"name" : "XSDClassFactory",
+	"type" : "normal"
+}
