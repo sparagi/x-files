@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "BEL 5/30/2005 19:51",
 	"super" : "XSDAnySimpleType",
-	"category" : "Information-Data Formats-XSD-Simple Types",
+	"category" : "Information-Data Formats-XSD",
 	"classinstvars" : [
 		"memberTypes"
 	],

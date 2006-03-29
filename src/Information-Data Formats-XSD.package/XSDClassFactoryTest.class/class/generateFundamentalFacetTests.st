@@ -5,7 +5,7 @@ generateFundamentalFacetTests
 	
 	| resultTable |
 	resultTable _ #(
-		"Class						ordered	bounde	d	cardinality				numeric"
+		"Class						ordered	bounded	cardinality				numeric"
 		('XSDAnyURI'				'false'		'false'		'#countablyInfinite'		'false')
 		('XSDBase64Binary'			'false'		'false'		'#countablyInfinite'		'false')
 		('XSDBoolean'				'false'		'false'		'#finite'					'false')

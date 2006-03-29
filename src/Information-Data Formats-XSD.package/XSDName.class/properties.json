@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "BEL 5/30/2005 02:16",
 	"super" : "XSDToken",
-	"category" : "Information-Data Formats-XSD-Simple Types",
+	"category" : "Information-Data Formats-XSD",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

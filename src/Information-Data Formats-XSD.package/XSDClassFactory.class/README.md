@@ -1,4 +1,4 @@
-My instances create classes based on an XML schema, as defined in the second edition (dated October 28, 2004) of the W3C Recommendations for XML Schema.  Instances of the resulting XSDDocument subclass, and its cohorts, can (or will soon be able to):
+My instances create classes based on an XML schema, as defined in the second edition (dated October 28, 2004) of the W3C Recommendations for XML Schema.  Instances of the resulting XSDDocument subclass, and its cohorts, can:
 
 	- parse XML documents which adhere to this schema
 	- determine whether an XML document adheres to this schema
@@ -19,7 +19,13 @@ If you would like to convert data from one XML schema to another, or to or from 
 	
 Many thanks to Craig Latta for initial design help.  Don't blame him for how it turned out; he hasn't seen it yet.
 
-Copyright (c) 2004 Brenda Larcom <asparagi@hhhh.org>
+At last count, the XML Schema specifications were available here:
+
+http://www.w3.org/TR/2004/REC-xmlschema-0-20041028/
+http://www.w3.org/TR/2004/REC-xmlschema-1-20041028/
+http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/
+
+Copyright (c) 2004-2006 Brenda Larcom <asparagi@hhhh.org>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
