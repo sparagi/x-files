@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "pbs 3/29/2006 20:41",
+	"super" : "TestCase",
+	"category" : "Information-Data Formats-XSD-Test",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XSDNamespaceTest",
+	"type" : "normal"
+}
