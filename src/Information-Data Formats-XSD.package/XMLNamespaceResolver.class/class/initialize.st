@@ -5,6 +5,6 @@ initialize
 	Default := self basicNew.
 	"From 'Namespaces in XML':
 	The prefix xml is by definition bound to the namespace name http://www.w3.org/XML/1998/namespace."
-	Default
+	"Default
 		allElementTypesAt: 'xml' put: (XMLNamespace withUri: 'http://www.w3.org/XML/1998/namespace');
-		globalAttributeTypesAt: 'xml' put: (XMLNamespace withUri: 'http://www.w3.org/XML/1998/namespace').
+		globalAttributeTypesAt: 'xml' put: (XMLNamespace withUri: 'http://www.w3.org/XML/1998/namespace')."
