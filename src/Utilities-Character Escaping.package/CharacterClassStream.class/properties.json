@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "BEL 4/29/2006 16:59",
+	"super" : "Object",
+	"category" : "Utilities-Character Escaping",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stream",
+		"characterClasses"
+	],
+	"name" : "CharacterClassStream",
+	"type" : "normal"
+}

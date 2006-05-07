@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "BEL 4/29/2006 17:29",
+	"super" : "Object",
+	"category" : "Utilities-Character Escaping",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CharacterEscapeHandler",
+	"type" : "normal"
+}

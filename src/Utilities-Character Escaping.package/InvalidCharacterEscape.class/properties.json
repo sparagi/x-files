@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "BEL 4/29/2006 17:45",
+	"super" : "Error",
+	"category" : "Utilities-Character Escaping",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "InvalidCharacterEscape",
+	"type" : "normal"
+}
