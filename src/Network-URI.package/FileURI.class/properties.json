@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "HierarchicalURI",
+	"category" : "Network-URI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FileURI",
+	"type" : "normal"
+}

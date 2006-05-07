@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "HostIdentifier",
+	"category" : "Network-URI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"address"
+	],
+	"name" : "IPv4Address",
+	"type" : "normal"
+}

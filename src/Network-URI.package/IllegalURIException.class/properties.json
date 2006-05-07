@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "BEL 4/29/2006 18:07",
+	"super" : "Error",
+	"category" : "Network-URI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "IllegalURIException",
+	"type" : "normal"
+}

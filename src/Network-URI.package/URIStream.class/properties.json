@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Network-URI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"URICharacters"
+	],
+	"instvars" : [
+		"stream",
+		"useEntireContents"
+	],
+	"name" : "URIStream",
+	"type" : "normal"
+}
