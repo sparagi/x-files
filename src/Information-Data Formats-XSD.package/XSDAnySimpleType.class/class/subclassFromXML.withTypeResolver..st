@@ -9,7 +9,7 @@ subclassFromXML: xml withTypeResolver: resolver
 	
 	xml attributes do: [:attribute |
 		(#('final' 'id' 'name') includes: attribute) ifFalse: [
-			TypeError signal: 'unknown attribute for simpleType' with: attribute]].
+			XSDTypeError signal: 'unknown attribute for simpleType' with: attribute]].
 
 	subclassFinal := xml attributeAt: 'final'.
 	subclassFinal ifNotNil: [

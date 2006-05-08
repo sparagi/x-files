@@ -25,4 +25,49 @@ http://www.w3.org/TR/2004/REC-xmlschema-0-20041028/
 http://www.w3.org/TR/2004/REC-xmlschema-1-20041028/
 http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/
 
+BIG PICTURE
+
+OK, so basically there are 5 key classes, some small classes that fit into the framework the key classes provide, & some error classes.
+
+The 5 key classes are:
+
+XMLNamespace
+XMLNamespaceResolver
+XSDClassFactory
+XSDAnySimpleType
+XSDComplexType
+
+XSDClassFactory is the main entry point for when you want to understand a new XML file format.  You give the XSD to an instance of XSDClassFactory & say invoke.
+
+When you invoke the XSDClassFactory, it groks the XSD and creates subclasses of XSDAnySimpleType and XSDComplexType according to the instructions in the XSD.
+
+Instances of a subclass of XSDAnySimpleType or XSDComplexType can then be used to parse or write XML documents which match the original XSD.   Conversion methods should be added to the generated XSDType classes & the destination classes. 
+
+Instances of the XMLNamespace & XMLNamespaceResolver are used by both XSDClassFactory (i.e. grokking XSDs) and the generated XSDType subclasses (i.e. grokking the corresponding XML) to deal with names that appear in XML.
+
+A FEW MORE DETAILS
+
+XSDClassFactory parses the XSD in one pass, in mostly textual order.  
+
+There are basically 2 kinds of things in an XSD: type-related stuff, and naming-related stuff.  The type-related stuff is relativey straightforward.  There is a 1-1 correspondence between types defined in the XSD  & types created as XSDType subclasses.  The naming-related stuff is a green pointy thing that lurks under rocks. 
+
+The key points about naming:
+	- Every use of a type (i.e. element or attribute) has a name.
+	- Not every type has a name.
+	- Every name is in a namespace.
+	- A namespace has different partitions for elements & attributes.
+	- A name can be unqualified ('foo') or qualified ('fnord:foo').
+	- If a name is qualified, the first part ('fnord') is the name of the namespace (XMLNamespace instance).
+	- If a name is unqualified, it is in the default namespace for that context.
+	- Namespaces have different names in different contexts (hence XMLNamespaceResolver).
+	- Namespace scoping is quite complicated; this is what the namespace classes are for. 
+	- Names used in an XSD can be forward references.  A lot of the code in XSDClassFactory is using the namespace classes to remember & then resolve the forward references.
+
+XSDAnySimpleType subclasses can be used as elements or attributes.  The predefined ones that come with XSDClassFactory are from the XSD spec.  To create a new one, you essentially specify a constraint on an existing one.   Most of the code in XSDAnySimpleType is to deal with parsing & implementing these constraints.
+
+XSDComplexType subclasses can only be used as elements.  To create a new one, you associate a bunch of names with a bunch of types.
+
+---
+
+What is the difference between XML documents & XML elements?
 For license see https://github.com/sparagi/x-files/blob/master/LICENSE.

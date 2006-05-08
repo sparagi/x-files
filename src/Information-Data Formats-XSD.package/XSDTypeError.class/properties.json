@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "TypeError",
+	"name" : "XSDTypeError",
 	"type" : "normal"
 }

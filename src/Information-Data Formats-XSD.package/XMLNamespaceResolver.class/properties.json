@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "BEL 3/29/2006 21:00",
 	"super" : "Object",
 	"category" : "Information-Data Formats-XSD",
 	"classinstvars" : [
@@ -9,7 +9,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"parent",
-		"prefixToNamespace"
+		"namespaces"
 	],
 	"name" : "XMLNamespaceResolver",
 	"type" : "normal"

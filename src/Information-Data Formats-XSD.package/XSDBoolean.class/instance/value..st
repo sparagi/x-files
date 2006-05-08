@@ -1,6 +1,6 @@
 accessing
 value: newValue
-	"Set my value.  Signal TypeError if newValue is not a valid value for my type."
+	"Set my value.  Signal XSDTypeError if newValue is not a valid value for my type."
 
 	| valueSet |
 	valueSet := false.
@@ -17,4 +17,4 @@ value: newValue
 		value := true.
 		valueSet := true ].
 	valueSet ifFalse: [
-		TypeError signal]
+		XSDTypeError signal]
