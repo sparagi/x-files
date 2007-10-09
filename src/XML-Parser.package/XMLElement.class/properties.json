@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "XMLNodeWithElements",
+	"category" : "XML-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"contents",
+		"attributes"
+	],
+	"name" : "XMLElement",
+	"type" : "normal"
+}

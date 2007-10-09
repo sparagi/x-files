@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "XMLTokenizer",
+	"category" : "XML-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLParser",
+	"type" : "normal"
+}

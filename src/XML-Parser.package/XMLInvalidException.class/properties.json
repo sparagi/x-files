@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "XMLException",
+	"category" : "XML-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLInvalidException",
+	"type" : "normal"
+}

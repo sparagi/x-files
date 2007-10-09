@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "DTDEntityDeclaration",
+	"category" : "XML-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "DTDExternalEntityDeclaration",
+	"type" : "normal"
+}

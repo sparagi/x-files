@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Warning",
+	"category" : "XML-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SAXWarning",
+	"type" : "normal"
+}

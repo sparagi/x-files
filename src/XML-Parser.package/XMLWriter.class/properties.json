@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "XML-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"XMLTranslation",
+		"XMLTranslationMap"
+	],
+	"instvars" : [
+		"stream",
+		"stack",
+		"scope",
+		"scanner",
+		"canonical",
+		"currentIndent",
+		"indentString"
+	],
+	"name" : "XMLWriter",
+	"type" : "normal"
+}
