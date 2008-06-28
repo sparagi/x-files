@@ -1,5 +1,5 @@
-accessing
+accessing contents
 next
-	"Answer the next element and reposition myself after it."
-
+	"Answer my next element (literally), and increment my position."
+	
 	^stream next

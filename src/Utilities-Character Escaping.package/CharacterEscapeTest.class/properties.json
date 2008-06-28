@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "BEL 10/29/2007 22:12",
+	"super" : "TestCase",
+	"category" : "Utilities-Character Escaping-Test",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CharacterEscapeTest",
+	"type" : "normal"
+}

@@ -2,4 +2,10 @@ I am an abstract class.  Instances of my concrete subclasses parse escaped chara
 
 CharacterClassDefinition holds instances of my concrete subclasses so that they can be used by CharacterClassStream.
 
-For\ license\ see\ https\://github.com/sparagi/x-files/blob/master/LICENSE.
+Instance Variables
+
+-	beginMarker	a String which marks the beginning of an encoded character
+-	endMarker		a String which marks the end of an encoded character
+
+For license see https://github.com/sparagi/x-files/blob/master/LICENSE.
+

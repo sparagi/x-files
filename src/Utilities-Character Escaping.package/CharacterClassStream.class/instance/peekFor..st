@@ -1,5 +1,5 @@
-accessing
+accessing contents
 peekFor: anObject
-	"Answer whether the next element is equal to anObject. Increment the position if it is."
+	"If my next element is literally equal to anObject, increment my position and answer true.  Otherwise, answer false and do not increment my position."
 
 	^stream peekFor: anObject

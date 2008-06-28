@@ -1,5 +1,5 @@
-accessing
-nextPutAll: aSequenceableCollection
-	"Put each of the elements of aSequenceableCollection on my stream at the next position. Answer aSequenceableCollection."
-
-	^stream nextPutAll: aSequenceableCollection
+accessing contents
+nextPutAll: aCollection
+	"Insert the elements of aCollection (literally) as my next elements, incrementing my position by N. Answer aCollection."
+	
+	^stream nextPutAll: aCollection

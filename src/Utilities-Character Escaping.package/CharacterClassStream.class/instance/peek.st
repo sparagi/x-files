@@ -1,5 +1,5 @@
-accessing
+accessing contents
 peek
-	"Answer the next element without changing position."
+	"Answer my next element, literally, without changing my position. If I am atEnd, answer nil."
 
 	^stream peek

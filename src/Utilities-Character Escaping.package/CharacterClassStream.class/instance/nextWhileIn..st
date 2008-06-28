@@ -1,6 +1,6 @@
-accessing
+accessing contents
 nextWhileIn: characterClassName
-	"Answer the longest possible contiguous string of characters which are acceptable according to the character class corresponding to characterClassName, starting from my stream's current position."
+	"Answer the longest possible contiguous string of characters which are acceptable according to the character class corresponding to characterClassName, starting from my stream's current position and unescaping characters as needed.  Increment my position."
 
 	| result |
 

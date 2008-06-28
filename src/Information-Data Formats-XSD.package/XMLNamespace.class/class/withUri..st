@@ -7,7 +7,8 @@ withUri: aURI
 		ifTrue: [
 			newInstance := self new]
 		ifFalse: [
-			newInstance := Instances at: aURI ifAbsentPut: [self new].
+			Instances at: aURI ifPresent: [:answer | ^answer].
+			newInstance := self new.
 			newInstance uri: aURI].
 	newInstance initializeGlobalPartitions.
 	^newInstance

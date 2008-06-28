@@ -1,5 +1,5 @@
 accessing
 beginning
-	"Answer the String which marks the beginning of an escape sequence."
+	"Answer my beginning marker."
 
-	self subclassResponsibility
+	^beginMarker

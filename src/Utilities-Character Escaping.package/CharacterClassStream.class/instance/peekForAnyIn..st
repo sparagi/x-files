@@ -1,11 +1,13 @@
-accessing
+accessing contents
 peekForAnyIn: characterClassName
-	"Answer whether the next character on my stream is acceptable according to the character class named characterClassName."
+	"Answer whether the next character on my stream is acceptable according to the character class named characterClassName.  In this context, a valid, complete escape sequence counts as an acceptable character."
 
-	"	| nextCharacter nextString |
+	| nextCharacter characterClass |
 
-	nextCharacter _ stream peek.
-
+	nextCharacter := stream peek.
+	characterClass := characterClasses at: characterClassName.
+	^(characterClass includes: nextCharacter) ifTrue: [true] ifFalse: [self shouldBeImplemented].
+"
 	^((URICharacters at: characterClassName) includes: nextCharacter) yourselfUnlessTrue: [
 		(nextCharacter = $%)
 			ifTrue: [
@@ -17,5 +19,3 @@ peekForAnyIn: characterClassName
 					on: Error
 					do: [false]]
 			ifFalse: [true]]"
-	self shouldBeImplemented.
-	^(characterClasses at: characterClassName) includes: stream peek

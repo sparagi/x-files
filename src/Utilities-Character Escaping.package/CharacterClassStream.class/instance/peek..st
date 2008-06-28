@@ -1,5 +1,5 @@
-accessing
+accessing contents
 peek: anInteger
-	"Answer the next anInteger elements without changing position."
+	"Answer my next anInteger elements, literally, without changing my position. If I am atEnd, answer nil."
 
 	^stream peek: anInteger

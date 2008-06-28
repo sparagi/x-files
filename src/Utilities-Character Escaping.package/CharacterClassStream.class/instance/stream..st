@@ -1,5 +1,5 @@
-initialization
+accessing attributes
 stream: aStream
 	"Set my stream to aStream."
 
-	stream _ aStream
+	stream := aStream

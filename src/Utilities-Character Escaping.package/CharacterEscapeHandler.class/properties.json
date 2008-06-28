@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "BEL 4/29/2006 17:29",
+	"commentStamp" : "BEL 5/21/2008 11:47",
 	"super" : "Object",
 	"category" : "Utilities-Character Escaping",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"beginMarker",
+		"endMarker"
+	],
 	"name" : "CharacterEscapeHandler",
 	"type" : "normal"
 }

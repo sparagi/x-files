@@ -1,8 +1,7 @@
-accessing
-nextPutAll: aString as: characterClassName 
-	"Write aString to my stream, encoding any characters not
-	allowed by the character class named by
-	characterClassName. "
+accessing contents
+nextPutAll: aString as: characterClassName	
+	"Write aString to my stream, escaping any characters not allowed by the named character class."
+	
 	"| nextCharacter source |
 	source := aString readStream.
 	[source atEnd]

@@ -1,5 +1,5 @@
-accessing
+accessing contents
 nextPut: anObject
-	"Put anObject at the next position and answer it."
-
+	"Insert anObject (literally) as my next element, incrementing my position. Answer anObject."
+	
 	^stream nextPut: anObject

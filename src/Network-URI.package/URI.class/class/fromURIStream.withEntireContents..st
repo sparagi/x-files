@@ -5,12 +5,12 @@ fromURIStream: aURIStream withEntireContents: aBoolean
 	| relativePosition scheme |
 
 	"Scan for a scheme."
-	relativePosition _ 0.
+	relativePosition := 0.
 	(aURIStream peekForAnyIn: #alpha) ifTrue: [
-		scheme _ aURIStream nextWhileIn: #scheme.	
-		relativePosition _ scheme size negated.
+		scheme := aURIStream nextWhileIn: #scheme.	
+		relativePosition := scheme size negated.
 		(aURIStream peekFor: $:) ifFalse: [
-			scheme _ nil.
+			scheme := nil.
 			aURIStream skip: relativePosition]].
 
 	"Choose a concrete class based on whether the URI has a hierarchical part or an opaque part."
