@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "BEL 4/29/2006 17:27",
+	"commentStamp" : "BEL 6/30/2008 17:20",
 	"super" : "Object",
 	"category" : "Utilities-Character Escaping",
 	"classinstvars" : [ ],
@@ -9,6 +9,6 @@
 		"characters",
 		"escapeHandlers"
 	],
-	"name" : "CharacterClassDefinition",
+	"name" : "CharacterClass",
 	"type" : "normal"
 }

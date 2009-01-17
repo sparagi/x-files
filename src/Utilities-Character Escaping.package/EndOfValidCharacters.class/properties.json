@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "BEL 6/30/2008 17:16",
+	"commentStamp" : "BEL 6/30/2008 10:55",
 	"super" : "Error",
 	"category" : "Utilities-Character Escaping",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "InvalidCharacterEscape",
+	"name" : "EndOfValidCharacters",
 	"type" : "normal"
 }

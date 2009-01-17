@@ -4,5 +4,5 @@ testConstructSingleEscapeHandler
 	| escaped |
 
 	escaped := 
-		CharacterClassDefinition constructEscapeHandlers: (Array with: 
+		CharacterClass constructEscapeHandlers: (Array with: 
 			(HexEscapeHandler beginningWith: '%')).

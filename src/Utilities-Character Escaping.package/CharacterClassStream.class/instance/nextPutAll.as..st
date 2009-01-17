@@ -1,4 +1,4 @@
-accessing contents
+unescaped contents
 nextPutAll: aString as: characterClassName	
 	"Write aString to my stream, escaping any characters not allowed by the named character class."
 	

@@ -4,6 +4,6 @@ testConstructMultipleEscapeHandlers
 	| escaped |
 
 	escaped := 
-		CharacterClassDefinition constructEscapeHandlers: (Array 
+		CharacterClass constructEscapeHandlers: (Array 
 			with: (CharacterEscapeHandler html)
 			with: (CharacterEscapeHandler uri)).

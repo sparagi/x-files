@@ -1,5 +1,5 @@
-positioning
+literal contents
 skip: anInteger
 	"Increment my position by anInteger."
 	
-	self shouldBeImplemented
+	^stream skip: anInteger
