@@ -1,5 +1,5 @@
 debugging
-error: aString
-	"Throw an IllegalURIException."
+error: message
+	"Signal an IllegalURIException."
 	
-	^IllegalURIException signal: aString with: self
+	^IllegalURIException signal: message with: self

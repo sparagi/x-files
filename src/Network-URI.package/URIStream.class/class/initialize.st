@@ -1,112 +1,144 @@
 initialization
 initialize
-	"Populate URICharacters as per RFC 2396."
-	"Note that we use explicit sets of characters because RFC 2396 specifically says that these characters are the only ones allowed in the situations listed below. Some locales may include additional characters in, say, isAlpha, but we would still not want to include them here."
-	"Watch out; several symbols defined here have structure beyond the allowable characters given."
+	"Populate URICharacters as per RFC 3986.
+	
+	Note that we use explicit sets of characters because RFC 3986 specifically says that these 
+	characters are the only ones allowed in the situations listed below. Some locales may 
+	include additional characters in, say, isAlpha, but we would still not want to include them 
+	here.
+		
+	Watch out; several symbols defined here have structure beyond the allowable characters 
+	given."
 	"self initialize"
 
-	URICharacters _ Dictionary new.
+	URICharacters := Dictionary new.
 
+	"Definitions taken straight from RFC 2234, Appendix A."
 	URICharacters
-		at: 'lowalpha'
-		put: 'abcdefghijklmnopqrstuvwxyz' asIdentitySet;
-		at: 'upalpha'
-		put: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' asIdentitySet;
-		at: 'digit'
-		put: '0123456789' asIdentitySet;
-		at: 'mark'
-		put: '-_.!~*''()' asIdentitySet;
-		at: 'reserved'
-		put: ';/?:@&=+$,' asIdentitySet.
-
-	URICharacters 
-		at: 'alpha'
+		at: #ALPHA
+		put: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' asIdentitySet;
+		at: #DIGIT
+		put: '0123456789' asIdentitySet.
+		
+	"Definition taken from RFC 2234, Appendix A, but fudged to meet the needs of RFC 3986.  RFC
+	3986 does not redefine this basic character class, but RFC 2234 did not include abcdef, which
+	section 2.1 of RFC 3986 says are to be treated as equivalent to ABCDEF when parsing a URI.  
+	Therefore, it seemed best to add abcdef here."	
+	URICharacters
+		at: #HEXDIG
 		put: (
-			((URICharacters at: 'lowalpha') copy) 
-				addAll: (URICharacters at: 'upalpha'); 
-				yourself);
-		at: 'hex'
-		put: (
-			((URICharacters at: 'digit') copy)
+			((URICharacters at: #DIGIT) copy) 
 				addAll: 'ABCDEFabcdef';
 				yourself).
 
-	URICharacters 
-		at: 'alphanum'
-		put: (
-			((URICharacters at: 'alpha') copy)
-				addAll: (URICharacters at: 'digit');
-				yourself);
-		at: 'escaped'
-		put: (
-			((URICharacters at: 'hex') copy) 
-				addAll: '%';
-				yourself).
-
-	URICharacters 
-		at: 'unreserved'
-		put: (
-			((URICharacters at: 'alphanum') copy)
-				addAll: (URICharacters at: 'mark');
-				yourself).
-
+	"Definitions taken straight from RFC 3986, Appendix A.  Since the appendix is written in a 
+	top-down style, we need to define the character classes in nearly the reverse of the order 
+	in which they appear in the appendix."
 	URICharacters
-		at: 'uric'
+		at: #'sub-delims'
+		put: '!$&''()*+,;=' asIdentitySet;
+		at: #'gen-delims'
+		put: ':/?#[]@' asIdentitySet;
+		at: #reserved
 		put: (
-			((URICharacters at: 'reserved') copy) 
-				addAll: (URICharacters at: 'unreserved'); 
-				addAll: (URICharacters at: 'escaped');
+			((URICharacters at: #'gen-delims') copy) 
+				addAll: (URICharacters at: #'sub-delims');
 				yourself);
-		at: 'pchar'
+		at: #unreserved
 		put: (
-			((URICharacters at: 'unreserved') copy)
-				addAll: (URICharacters at: 'escaped');
-				addAll: ':@&=+$,';
+			((URICharacters at: #ALPHA) copy) 
+				addAll: (URICharacters at: #DIGIT);
+				addAll: '-._~';
 				yourself).
-
-	URICharacters 
-		at: 'uricNoSlash'
-		put: ((URICharacters at: 'uric') copyWithout: $/);
-		at: 'domainlabel'
+				
+	"Definition taken from RFC 3986, Appendix A, but changed to support my implementation of 
+	percent escaping.  My implementation hard codes an expectation for two #HEXDIG characters
+	after any legal percent; therefore, #HEXDIG is not needed here."
+	URICharacters
+		at: #'pct-encoded'	"From context, the pcs in pct-encoded seems to stand for percent."
+		put: '%' asIdentitySet.
+				
+	"Definitions taken straight from RFC 3986, Appendix A."
+	URICharacters
+		at: #pchar	"From context, the p in pchar seems to stand for path."
 		put: (
-			((URICharacters at: 'alphanum') copy)
-				addAll: '-';
+			((URICharacters at: #unreserved) copy)
+				addAll: (URICharacters at: #'pct-encoded');
+				addAll: (URICharacters at: #'sub-delims');
+				addAll: ':@';
 				yourself);
-		at: 'scheme'
+		at: #query
 		put: (
-			((URICharacters at: 'alphanum') copy)
-				addAll: '+-.';
+			((URICharacters at: #pchar) copy)
+				addAll: '/?';
+				yourself);				
+		at: #fragment
+		put: (
+			((URICharacters at: #pchar) copy)
+				addAll: '/?';
 				yourself);
-		at: 'segment'
+		at: #segment
+		put: (URICharacters at: #pchar) copy.
+				
+	"Definition taken from RFC 3986, Appendix A, but renamed from segment-nz-nc to make 
+	more sense as a character class rather than a structured definition."
+	URICharacters
+		at: #'segment-nc'	"From context, the nc in segment-nc seems to stand for colon."
 		put: (
-			((URICharacters at: 'pchar') copy)
-				addAll: ';';
-				yourself);
-		at: 'userinfo'
-		put: (
-			((URICharacters at: 'unreserved') copy)
-				addAll: (URICharacters at: 'escaped');
-				addAll: ';:&=+$,';
-				yourself).
-
-	URICharacters 
-		at: 'relSegment'
-		put: ((URICharacters at: 'segment') copyWithout: $:);
-		at: 'pathSegments'
-		put: (
-			((URICharacters at: 'segment') copy)
-				addAll: '/';
-				yourself);
-		at: 'regName'
-		put: (
-			((URICharacters at: 'userinfo') copy)
+			((URICharacters at: #unreserved) copy)
+				addAll: (URICharacters at: #'pct-encoded');
+				addAll: (URICharacters at: #'sub-delims');
 				addAll: '@';
 				yourself).
-
-	"Characters not in the anywhere list should never appear anywhere in a URI."
-	 URICharacters
-		at: 'anywhere'
+				
+	"Definitions taken straight from RFC 3986, Appendix A."
+	URICharacters
+		at: #path
 		put: (
-			((URICharacters at: 'uric') copy)
-				addAll: '#';
-				yourself)
+			((URICharacters at: #segment) copy)
+				addAll: '/';
+				yourself);
+		at: #'reg-name'
+		put: (
+			((URICharacters at: #unreserved) copy)
+				addAll: (URICharacters at: #'pct-encoded');
+				addAll: (URICharacters at: #'sub-delims');
+				yourself);
+		at: #IPv4address
+		put: (
+			((URICharacters at: #DIGIT) copy)
+				addAll: '.';
+				yourself);	
+		at: #IPv6address
+		put: #() asIdentitySet needsWork;
+		at: #IPvFuture
+		put: #() asIdentitySet needsWork;	
+		at: #'IP-literal'
+		put: (
+			((URICharacters at: #IPv6address) copy)
+				addAll: (URICharacters at: #IPvFuture);
+				addAll: '[]';
+				yourself);
+		at: #userinfo
+		put: (
+			((URICharacters at: #unreserved) copy)
+				addAll: (URICharacters at: #'pct-encoded');
+				addAll: (URICharacters at: #'sub-delims');
+				addAll: ':';
+				yourself);
+		needsWork;
+		at: #scheme
+		put: (
+			((URICharacters at: #ALPHA) copy)
+				addAll: (URICharacters at: #DIGIT);
+				addAll: '+-.';
+				yourself).
+	
+	"Definition invented based on RFC 3986, Appendix A."	
+	URICharacters
+		at: #anywhere
+		put: (
+			((URICharacters at: #reserved) copy)
+				addAll: (URICharacters at: #unreserved);
+				addAll: (URICharacters at: #'pct-encoded');
+				yourself).

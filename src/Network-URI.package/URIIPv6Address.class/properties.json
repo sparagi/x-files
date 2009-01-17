@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "URIHostIdentifier",
+	"category" : "Network-URI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"address"
+	],
+	"name" : "URIIPv6Address",
+	"type" : "normal"
+}

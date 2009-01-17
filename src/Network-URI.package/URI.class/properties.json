@@ -1,16 +1,21 @@
 {
-	"commentStamp" : "BEL 10/29/2007 22:17",
+	"commentStamp" : "BEL 11/29/2008 21:06",
 	"super" : "Object",
 	"category" : "Network-URI",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [
-		"CharacterClasses"
+		"ClassByScheme",
+		"DefaultPortByScheme"
 	],
 	"instvars" : [
-		"fragment",
 		"scheme",
-		"path"
+		"userinfo",
+		"host",
+		"port",
+		"path",
+		"query",
+		"fragment"
 	],
 	"name" : "URI",
 	"type" : "normal"

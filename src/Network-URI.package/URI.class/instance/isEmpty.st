@@ -2,4 +2,5 @@ testing
 isEmpty
 	"Answer whether I contain anything important (according to my scheme)."
 
-	^self subclassResponsibility
+	self needsWork.
+	^(path isNil) and: [authority isNil]

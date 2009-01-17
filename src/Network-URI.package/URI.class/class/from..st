@@ -1,6 +1,6 @@
 instantiation
 from: aStream
-	"Answer a new instance of myself, composed from aStream."
-	"Composition begins from the current position of aStream, and may end before the end of aStream."
+	"Answer a new instance of myself, parsed from aStream (conforms to Stream).
+	Parsing begins at the current position of aStream, and may end before the end of aStream."
 
-	^self fromURIStream: (CharacterClassStream on: aStream with: self characterClasses) withEntireContents: false
+	^self from: aStream untilEnd: false

@@ -6,7 +6,8 @@ peekForAnyIn: characterClassName
 
 	nextCharacter _ stream peek.
 
-	^((URICharacters at: characterClassName) includes: nextCharacter) yourselfUnlessTrue: [
+	^((URICharacters at: characterClassName) includes: nextCharacter) 
+		ifTrue: [
 		(nextCharacter = $%)
 			ifTrue: [
 				[
@@ -17,3 +18,4 @@ peekForAnyIn: characterClassName
 					on: Error
 					do: [false]]
 			ifFalse: [true]]
+		ifFalse: [false]

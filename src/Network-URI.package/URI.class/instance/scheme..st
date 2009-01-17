@@ -1,12 +1,13 @@
 accessing
-scheme: newScheme 
-	"Set my scheme."
-	"No escaped characters can appear in a scheme, so throw an
-	exception if scheme is not syntactically valid."
-	| aURIStream actualScheme |
-	aURIStream := CharacterClassStream on: newScheme readStream with: self class characterClasses.
-	(aURIStream peekForAnyIn: #alpha)
-		ifTrue: [actualScheme := aURIStream nextWhileIn: #scheme.
-			aURIStream atEnd
-				ifTrue: [scheme := actualScheme]
-				ifFalse: [self error: 'syntactically invalid scheme']]
+scheme: proposedScheme 
+	"Set my scheme to proposedScheme (conforms to String).
+	Signal an error if scheme is not syntactically valid."
+
+	scheme := proposedScheme 
+		ifNil: [nil]
+		ifNotNil: [ | uriStream validScheme |
+			uriStream := URIStream on: (proposedScheme, ':') readStream.
+			validScheme := self class readSchemeFrom: uriStream.
+			uriStream atEnd
+				ifTrue: [validScheme asLowercase]
+				ifFalse: [IncompatibleURIScheme signal: 'class cannot handle new scheme' with: self.  nil]]

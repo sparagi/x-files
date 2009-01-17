@@ -8,8 +8,7 @@
 		"URICharacters"
 	],
 	"instvars" : [
-		"stream",
-		"useEntireContents"
+		"stream"
 	],
 	"name" : "URIStream",
 	"type" : "normal"

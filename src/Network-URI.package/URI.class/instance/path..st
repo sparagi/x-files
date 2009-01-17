@@ -1,6 +1,5 @@
 accessing
-path: newPath
-	"Set my path component."
-	"My subclass is responsible for enforcing syntax rules appropriate to the path component for the kind of URI it implements."
+path: proposedPath
+	"Set my path to proposedPath (nil, conforms to String, or conforms to Collection of Strings)."
 
-	self subclassResponsibility
+	path := proposedPath needsWork

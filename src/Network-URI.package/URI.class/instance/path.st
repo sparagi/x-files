@@ -1,5 +1,5 @@
 accessing
 path
-	"Answer my path component."
+	"Answer an OrderedCollection of Strings representing my path components, or nil if there are none."
 
-	^path
+	^path copy

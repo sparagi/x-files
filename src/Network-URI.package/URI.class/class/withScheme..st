@@ -1,7 +1,5 @@
 instantiation
 withScheme: scheme
-	"Answer a new instance of myself with the given scheme."
-	"This message should never be sent to URI, only to its concrete subclasses."
+	"Answer a new instance of myself with scheme set to scheme (conforms to String)."
 
-	self shouldBeImplemented.  "Validation here in case this is called by a manual constructor"
-	^self new scheme: scheme
+	^(self classToRepresent: scheme) new scheme: scheme

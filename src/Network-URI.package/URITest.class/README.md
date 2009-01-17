@@ -1,7 +1,6 @@
-'
-	I test class URI and related classes for RFC 2396 compliance.
+I test class URI and related classes for RFC 3986 compliance.
 
-	My automatically generated tests came, with very little modification, from Michael Rueger's TestURI class; thanks, Michael!
+My automatically generated tests came, with very little modification, from Michael Rueger's TestURI class; thanks, Michael!
 
 
-	Author: Brenda Larcom <asparagi@hhhh.org>
+Author: Brenda Larcom <asparagi@hhhh.org>

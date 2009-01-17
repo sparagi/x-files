@@ -1,6 +1,6 @@
 instantiation
-fromString: aString 
-	"Answer a new instance of myself, composed from the entire
-	contents of aString."
-	^ self
-		fromURIStream: (CharacterClassStream on: aString readStream with: self characterClasses) withEntireContents: true
+fromString: uri 
+	"Answer a new instance of myself, parsed from the entire contents of uri (conforms to
+	String)."
+	
+	^ self from: uri readStream untilEnd: true

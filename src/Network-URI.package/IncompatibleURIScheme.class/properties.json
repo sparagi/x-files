@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "BEL 1/11/2009 11:24",
+	"super" : "Error",
+	"category" : "Network-URI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "IncompatibleURIScheme",
+	"type" : "normal"
+}

@@ -4,16 +4,16 @@ nextWhileIn: characterClassName
 
 	| nextCharacter inProgress |
 
-	inProgress _ WritableStream onShortString.
+	inProgress _ (String new: 10) writeStream.
 	nextCharacter _ stream peek.
 
 	[(URICharacters at: characterClassName) includes: nextCharacter] whileTrue: [
 		(nextCharacter = $%) ifTrue: [
-			stream skip.
+			stream next.
 			nextCharacter _ Character value: (Number readFrom: ('16r', (stream peek: 2) asUppercase)).
-			stream skip].
+			stream next].
 		inProgress nextPut: nextCharacter.
-		stream skip.
+		stream next.
 		nextCharacter _ stream peek].
 
 	 ^inProgress contents
