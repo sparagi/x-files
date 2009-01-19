@@ -1,5 +1,5 @@
 debugging
 error: aString
-	"Throw an IllegalURIException."
+	"Throw an IllegalURI exception."
 	
-	^IllegalURIException signal: aString with: self
+	^IllegalURI signal: aString with: self

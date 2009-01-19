@@ -9,8 +9,8 @@ testSchemePercentEncoding
 	percentEncodedScheme := 'sch%65me'.
 	uriString := percentEncodedScheme, ':restOfURI'.
 	uriObject := URI withScheme: nil.
-	self should: [URI fromString: uriString] raise: IllegalURIException.
-	self should: [URI withScheme: percentEncodedScheme] raise: IllegalURIException.
-	self should: [uriObject scheme: percentEncodedScheme] raise: IllegalURIException
+	self should: [URI fromString: uriString] raise: IllegalURI.
+	self should: [URI withScheme: percentEncodedScheme] raise: IllegalURI.
+	self should: [uriObject scheme: percentEncodedScheme] raise: IllegalURI
 	
 	"Can't test (b) because, based on testSchemeIllegalCharacters, there is no way to get characters that need to be encoded into a scheme to start with."

@@ -9,4 +9,4 @@ testFragmentIllegalCharacters
 	illegalCharacters do: [:char | | illegalFragment uriString |
 		illegalFragment := 'place', char asString, 'go'.
 		uriString := 'scheme:restOfURI#', illegalFragment.
-		self should: [URI fromString: uriString] raise: IllegalURIException]
+		self should: [URI fromString: uriString] raise: IllegalURI]

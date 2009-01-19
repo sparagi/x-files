@@ -11,4 +11,4 @@ testQueryIllegalCharacters
 		uriString := 'scheme:restOfURI?', illegalQuery.
 		char caseOf: {
 			[$#] -> [self should: [(URI fromString: uriString) query = 'whatThe']]}
-			otherwise: [self should: [URI fromString: uriString] raise: IllegalURIException]]
+			otherwise: [self should: [URI fromString: uriString] raise: IllegalURI]]

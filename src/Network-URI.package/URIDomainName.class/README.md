@@ -1,11 +1,13 @@
-My instances represent IPv4 network addresses, used to represent a host in a URI, as defined in section 3.2.2 of RFC 3986.  
+My instances store domain names, as specified in section 3.5 of RFC 1034 and section 2.1 of RFC 1123.  For output, IDNA encoding (see RFC 3490), rather than percent encoding, is used to maximize compatibility with legacy URI resolvers as suggested in section 3.2.2 of RFC 3986.
+
+According to section 3.2.2 of RFC 3986, the operating system (in this case Squeak) decides what it will allow for the purpose of host identification; however, URI producers should use names that conform to the DNS syntax and are <= 255 characters long.  Therefore, I am the default implementation for RegisteredName, and my instances will not allow names that are over 255 characters when properly encoded for use in a URI.  
 
 Instance Variables
 
-- octets		4 bytes representing an IPv4 network address
+name		an OrderedCollection of Strings representing this domain name
 
 
-Copyright (c) 2003-2009 Brenda Larcom <asparagi@hhhh.org>
+Copyright (c) 2009 Brenda Larcom <asparagi@hhhh.org>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

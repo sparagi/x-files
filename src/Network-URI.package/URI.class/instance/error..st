@@ -1,5 +1,5 @@
 debugging
 error: message
-	"Signal an IllegalURIException."
+	"Signal an IllegalURI exception."
 	
-	^IllegalURIException signal: message with: self
+	^IllegalURI signal: message with: self

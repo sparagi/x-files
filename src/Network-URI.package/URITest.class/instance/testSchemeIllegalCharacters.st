@@ -15,6 +15,6 @@ testSchemeIllegalCharacters
 			[$/] -> [self should: [(URI fromString: uriString) scheme isNil]].
 			[$?] -> [self should: [(URI fromString: uriString) scheme isNil]].
 			[$#] -> [self should: [(URI fromString: uriString) scheme isNil]]}
-			otherwise: [self should: [URI fromString: uriString] raise: IllegalURIException].
-		self should: [URI withScheme: illegalScheme] raise: IllegalURIException.
-		self should: [uriObject scheme: illegalScheme] raise: IllegalURIException]
+			otherwise: [self should: [URI fromString: uriString] raise: IllegalURI].
+		self should: [URI withScheme: illegalScheme] raise: IllegalURI.
+		self should: [uriObject scheme: illegalScheme] raise: IllegalURI.]

@@ -10,6 +10,6 @@ testSchemeNonLetterBeginning
 		illegalScheme := char asString, 'scheme'.
 		uriString := illegalScheme, ':restOfURI'.
 		uriObject := URI withScheme: nil.
-		self should: [URI fromString: uriString] raise: IllegalURIException.
-		self should: [URI withScheme: illegalScheme] raise: IllegalURIException.
-		self should: [uriObject scheme: illegalScheme] raise: IllegalURIException]
+		self should: [URI fromString: uriString] raise: IllegalURI.
+		self should: [URI withScheme: illegalScheme] raise: IllegalURI.
+		self should: [uriObject scheme: illegalScheme] raise: IllegalURI]
