@@ -1,5 +1,8 @@
 host
 testHostIPv4
+	"Confirm that, as implied in section 3.5:
+		(a) the parser does percent decoding in a fragment
+		(b) the generator does percent encoding in a fragment."
 	"?"
 	
 	URI fromString: ''.
